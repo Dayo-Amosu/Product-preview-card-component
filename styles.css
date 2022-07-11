@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+:root {
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  height: 100vh - 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Cream);
+  font-family: Montserrat, sans-serif;
+  padding: 1rem;
+}
+
+.container {
+  width: 350px; 
+  height: 650px;
+  border-radius: 0.5rem;
+  background-color: var(--White);
+  margin: 1rem 0;
+}
+
+
+picture img {
+  width: 100%;
+  height: 250px;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+section:last-child {
+  padding: 1rem;
+}
+
+h2 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: var(--Dark-grayish-blue);
+  font-family: Montserrat, sans-serif;
+  margin: 1rem 0;
+}
+
+h1 {
+  font-size: 2rem;
+  font-family: Fraunces, sans-serif;
+  margin-bottom: 1rem;
+  color: var(--Very-dark-blue);
+}
+
+p {
+  color: var(--Dark-grayish-blue);
+  margin-bottom: 2rem;
+  line-height: 1.5rem;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+li:first-child {
+  margin-right: 2rem;
+  color: var(--Dark-cyan);
+  font-family: Fraunces, sans-serif;
+  font-size: 2rem;
+}
+
+li:last-child{
+  text-decoration: line-through;
+  color: var(--Dark-grayish-blue);
+  font-size: 0.7rem;
+}
+
+button {
+  background-color: var(--Dark-cyan);
+  width: 100%;
+  padding: 1rem;
+  color: var(--White);
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.btn img {
+  margin-right: 0.5rem;
+}
+
+button:hover {
+  background-color: hsl(158, 38%, 15%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 1rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 700px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 600px;
+    height: auto;
+    border-radius: 0.5rem ;
+  }
+
+  picture img {
+    height: 100%;
+    width: 100%;
+    border-radius: 0.5rem 0 0 0.5rem ;
+  }
+
+  section:last-child {
+    padding: 2rem 2rem;
+  }
+}
